@@ -42,11 +42,9 @@ def nested_loops(self, people):
 ```
 In this case we have a nested loop. Because the 2nd for loop depends on the amount of information being passed to it from the upper for loop it also has a Big O of O(n) so when we combine the two together we get a notation of O(n^2). In comparison to the other two that we talked about, O(n^2) is in blue. 
 
-![O(n^2) vs O(n)](Notation_Comparison.jpg)
+![Notation_Comparison 1](Notation_Comparison_test.jpg)
 
 Gross, right? The performance that we would get when running nested loops is pretty bad, and it only gets worse the larger the data set that we have. Imagine if we had 1 million names in our list of people. That would get really ugly really fast.
-
-![Notation_Comparison 2](Notation_Comparison2.jpg)
 
 We can't even see the blue line anymore...that's pretty bad. It's best to avoid using nested loops like this unless we know that our data set is going to be small.
 
@@ -56,3 +54,7 @@ That looks like this...
 ![O(log n)](O(log_n).jpg)
 
 This typically occurs when you cut your data in half for each iteration through your loop. For example, imagine that you are looking through a phone book for my name, Mathew. The computer would look at the letter that is exactly half way though the book and compare it to the first letter of my name. If it were further down the list (greater than the current letter) it wouldn't have to worry about all the other letters that are earlier in the list (less than the current letter). Following this pattern we could quickly cut down our time to find my name. This would result in a O(log n).
+
+That's it! You're now a pro at Big O notation!
+
+Click [here](welcome.md) to go back to the welcome screen.
