@@ -55,7 +55,7 @@ self.tail = new_node
 What about removing a node from the list? How do you think that would work?
 
 Were you thinking of something like this?
-![node removing](Node_removing.jpg)
+![Removing Node](node_removing.jpg)
 To remove a node from the middle of the list, we would just need to reassign a few attributes of the surrounding nodes. Once a node has nothing pointing to it, python magically determines that it isn't being used and is therefore trash. Python then takes care of that trash for us behind the scenes so we don't have to worry about reclaiming that space. Neat, huh!
 
 If we call our current node the one that we are trying to remove, the code would look like this:
@@ -69,7 +69,7 @@ current._next._previous = current._previous
 
 Lastly, what would it look like if we were to insert a node into the middle of the list?
 
-![Inserting Node](Node_inserting.jpg)
+![Inserting Node](Node_Inserting.jpg)
 
 Here's what were doing here.
 1. Create the new node
