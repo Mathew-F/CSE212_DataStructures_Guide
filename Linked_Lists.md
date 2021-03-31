@@ -97,3 +97,5 @@ Now it's your turn to give it a try. Below are two sample problems with their so
 [Sample Problem Solution 1](ll_sample_problem_solution1.py)
 
 [Sample Problem Solution 2](ll_sample_problem_solution2.py)
+
+When you're finished, you can click [here](welcome.md) to return to the welcome screen to check out some of the other awesome tutorials.
