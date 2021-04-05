@@ -74,10 +74,6 @@ That's it! You know the drill by now. It's your turn to give it a go. Below are 
 
 [Sample Problem #1](trees_sample_problem1.py)
 
-[Sample Problem #2](trees_sample_problem2.py)
-
 [Sample Problem Solution #1](trees_sample_problem1_solution.py)
-
-[Sample Problem Solution #2](trees_sample_problem2_solution.py)
 
 When you're finished, you can click [here](welcome.md) to return to the welcome screen to check out some of the other awesome tutorials.
