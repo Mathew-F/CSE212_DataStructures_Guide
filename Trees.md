@@ -48,11 +48,34 @@ else: #Going right
 ```
 You might have noticed that we are calling the same function that we are in to help us solve our challenge. This is called **recursion**. We will talk more about that later (It's super fun, you'll like it). This insert function simple checks to see if the value we want to insert is less than (meaning that it goes to the left) or greater than the current node (goes to the right) knowing that we are going to start at the top with the head or top of the tree. If the value we want is less than that of the head it goes to the left and checks if there is an opening that where we can put it. If not we pass the node left of the head (current.left) back to the function to test again. This time we check to see if the node left of the head (we'll call it node_L) has space either to the left or to the right of iteself for our new value with `node_L.left` or `node_L.right`. We continue to do this until we find a space for our new value. What about the case that our value is already in our tree? That depends on what you want your program to do but in this case we don't want any duplicates in the tree so we ignore it.
 
-Should you want to remove a node, follows a similar pattern. What about iterating through the tree and printing all of the nodes within? We would need to find a way to get the values from each node. 
+Should you want to remove a node, it gets a little more complicated. We would need to remove references to that node and rearrarange the tree to reflect the new organization. What about iterating through the tree and printing all of the nodes within? We would need to find a way to get the values from each node. 
 
 ```python
-
+if node is not None:
+    yield from self._traverse_forward(node.left)
+    yield node.data
+    yield from self._traverse_forward(node.right)
 ```
-
+If you aren't already familiar with `yield`, it acts like a return without changing position. In this case `yield` will print the value at the current node and continue on with the rest of the commands.
 
 ## Recursion
+Have you ever heard of the movie "Inception"? If not, the main concept of the movie is going into "dreams within dreams". Recursion is conceptually the same minus the dream part. Instead, we are going "functions within functions" so you can say we are cooler than them. In fact, the movie only goes 3 or 4 dreams deep but we have the possibility to go infinately many functions deep. Obviously, that would create a problem and we would never want to do that, (the Python intrepter actually prevents us from doing that anyway) but it's possible. 
+
+Recursion is really the process of breaking down complex and difficult problems into smaller ones that we know how to work with. It begins by identifing a base case that we know will happen so that we don't end up with an infinite loop. Once we get that, we can build up from there. Take the following function for example:
+
+```python
+def recursion(self, data, length):
+    print(data[length])
+    recursion(data, length-1)
+```
+Assuming that data is a list, we are really just printing each value of data. Why would we ever do something like this when we could accomplish the same exact thing in a `for` loop you ask? Well, we could but 1. That wouldn't be as cool and 2. Some problems are better solved with recursion.
+
+That's it! You know the drill by now. It's your turn to give it a go. Below are the sample problems followed by the solutions. Remember to try the problems before taking a peek at the solutions!
+
+[Sample Problem #1](trees_sample_problem1.py)
+
+[Sample Problem #2](trees_sample_problem2.py)
+
+[Sample Problem Solution #1](trees_sample_problem1_solution.py)
+
+[Sample Problem Solution #2](trees_sample_problem2_solution.py)
